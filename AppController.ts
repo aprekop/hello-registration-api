@@ -51,6 +51,11 @@ export class AppController {
         }
     }
 
+    @Get('/test')
+    getTest() {
+        return {value: 'test'};
+    }
+
     checkData(user: User) {
         const validator = new Validator();
         //First Name

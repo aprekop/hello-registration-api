@@ -101,6 +101,9 @@ var AppController = /** @class */ (function () {
             });
         });
     };
+    AppController.prototype.getTest = function () {
+        return { value: 'test' };
+    };
     AppController.prototype.checkData = function (user) {
         var validator = new class_validator_1.Validator();
         //First Name
@@ -140,6 +143,9 @@ var AppController = /** @class */ (function () {
         routing_controllers_1.Post(),
         __param(0, routing_controllers_1.Body())
     ], AppController.prototype, "post", null);
+    __decorate([
+        routing_controllers_1.Get('/test')
+    ], AppController.prototype, "getTest", null);
     AppController = __decorate([
         routing_controllers_1.Controller('/users')
     ], AppController);
