@@ -13,4 +13,3 @@ var app = routing_controllers_1.createExpressServer({
 // run express application on port 3000
 app.listen(3000);
 //# sourceMappingURL=app.js.map
-module.exports = app;

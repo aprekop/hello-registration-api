@@ -29,7 +29,7 @@ export class AppController {
     }
 
     @Post()
-    async post(@Body() user: any) {
+    async addUser(@Body() user: any) {
         console.log(user);
         const newUser = JSON.parse(user);
         if (this.checkData(newUser)) {
@@ -51,11 +51,7 @@ export class AppController {
         }
     }
 
-    @Get('/test')
-    getTest() {
-        return {value: 'test'};
-    }
-
+    //Double check incoming newUser
     checkData(user: User) {
         const validator = new Validator();
         //First Name

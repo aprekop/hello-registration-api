@@ -72,7 +72,7 @@ var AppController = /** @class */ (function () {
             });
         });
     };
-    AppController.prototype.post = function (user) {
+    AppController.prototype.addUser = function (user) {
         return __awaiter(this, void 0, void 0, function () {
             var newUser;
             return __generator(this, function (_a) {
@@ -101,9 +101,7 @@ var AppController = /** @class */ (function () {
             });
         });
     };
-    AppController.prototype.getTest = function () {
-        return { value: 'test' };
-    };
+    //Double check incoming newUser
     AppController.prototype.checkData = function (user) {
         var validator = new class_validator_1.Validator();
         //First Name
@@ -142,10 +140,7 @@ var AppController = /** @class */ (function () {
     __decorate([
         routing_controllers_1.Post(),
         __param(0, routing_controllers_1.Body())
-    ], AppController.prototype, "post", null);
-    __decorate([
-        routing_controllers_1.Get('/test')
-    ], AppController.prototype, "getTest", null);
+    ], AppController.prototype, "addUser", null);
     AppController = __decorate([
         routing_controllers_1.Controller('/users')
     ], AppController);
